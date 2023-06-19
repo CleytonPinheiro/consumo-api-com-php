@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro pedido</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <main class="content-form d-flex">
+        <img src="assets/bg.jpg" alt="Imagem plano fundo" />
+
+        <form action="./scripts/index.php" class="form d-flex" method="post">
+            
+            <h3>CADASTRAR PEDIDO</h3>
+
+            <div class="d-flex flex-direction-column">
+                <label for="sku" class="label">SKU</label>
+                <input type="number" name="sku" class="field" id="sku" placeholder="SKU (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="status" class="label">Status *</label>
+                <select id="status" name="status" class="field">
+                    <option value="enabled">Ativo</option>
+                    <option value="disabled">Desativo</option>
+                </select>
+            </div>           
+
+            <div class="d-flex flex-direction-column">
+                <label for="nbm" class="label">NBM</label>
+                <input type="number" class="field width-10" id="nbm" name="nbm" placeholder="NBM (opcional)" />
+            </div>
+            
+            <div class="d-flex flex-direction-column">
+                <label for="produto" class="label">Título do produto *</label>
+                <input type="text" class="field" id="produto" name="produto" placeholder="Produto"  />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="descricao" class="label">Descrição * </label>
+                <input type="text" class="field" id="descricao" name="descricao" placeholder="Descrição do produto"  />  
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="valor" class="label">Valor venda *</label>
+                <input type="number" class="field" id="valor" name="valor" placeholder="Valor venda"  />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="promocional" class="label">Valor promocional *</label>
+                <input type="number" class="field" id="promocional" name="valorPromocional" placeholder="Valor promocional"  />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="custo" class="label">Custo *</label>
+                <input type="number" class="field" id="custo" name="custo" placeholder="Custo"  />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="peso" class="label">Peso bruto (kg) *</label>
+                <input type="number" class="field " id="peso" name="peso" placeholder="Peso em (kg)"  />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="dimensoes" class="label">Dimensões com embalagem *</label>
+                <input type="number" class="field " id="dimensoes" name="dimensoes" placeholder="Dimensões (L x A x P) cm" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="marca" class="label">Marca *</label>
+                <input type="number" class="field" id="marca" name="marca" placeholder="Marca/Fabricante"  />     
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="modelo" class="label">Modelo</label>
+                <input type="number" class="field " id="modelo" name="modelo" placeholder="Modelo (opcional)"/>
+            </div>
+            
+            <div class="d-flex flex-direction-column">
+                <label for="genero" class="label">Gênero</label>
+                <input type="number" class="field " id="genero" name="genero" placeholder="Gênero (opcional)"/>
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="volume" class="label">Volume</label>
+                <input type="number" class="field " id="volume" name="volume" placeholder="Volume (opcional)"/>          
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="garantia" class="label">Garantia (meses) </label>
+                <input type="number" class="field" id="garantia" name="tempoGarantia" placeholder="Garantia (opcional)"/>          
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="categoria" class="label">Categoria principal </label>
+                <input type="text" class="field" id="categoria" name="categoria" placeholder="Categoria (opcional)" />          
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="subcategoria" class="label">Sub Categoria </label>
+                <input type="text" class="field" id="subcategoria" name="subCategoria" placeholder="Sub categoria (opcional)" />          
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="categoriafim" class="label">Categoria final</label>
+                <input type="text" class="field" id="categoriafim" name="categoriaFinal" placeholder="Sub categoria (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="ref" class="label">SKU loja </label>
+                <input type="text" class="field" id="ref" name="referencia" placeholder="SKU (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="skuvariacao" class="label">SKU da variação </label>
+                <input type="text" class="field" id="skuvariacao" name="skuVariacao" placeholder="SKU da variação (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="quantidade" class="label">Quantidade em estoque </label>
+                <input type="text" class="field" id="quantidade" name="quantidade" placeholder="Quantidade estoque (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="ean" class="label">EAN da variação </label>
+                <input type="number" class="field" id="ean" name="ean" placeholder="EAN da variação (opcional)" />
+            </div>
+
+            <div class="d-flex flex-direction-column">
+                <label for="especificacao" class="label">Especificação </label>
+                <input type="number" class="field" id="especificacao" name="especificacao" placeholder="Especificação (opcional)" />
+            </div>
+
+            <div class="d-flex input-img">
+                <label for="img" class="label label-img">Enviar fotos </label>
+                <input type="file" class="field d-flex" id="img" accept="image/*" multiple/>
+            </div>
+
+            <div class="form-group-btn d-flex">
+                <input type="reset" class="btn-action" value="Cancelar" />
+                <input type="submit" class="btn-action" value="Enviar" /> 
+            </div>           
+        </form>
+    </main>    
+</body>
+</html>
