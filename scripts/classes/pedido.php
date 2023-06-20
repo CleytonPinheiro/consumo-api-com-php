@@ -1,6 +1,6 @@
 <?php
 
-require './app/scripts/PedidoService.php';
+require_once './services/pedidoService.php';
 
 class Pedido {
 
@@ -8,17 +8,13 @@ class Pedido {
 
     function validaCampos($camposValidar) {
         // $camposObrigatorios = [$camposValidar['produto'],
-        //     $camposValidar['descricao'],
-        //     $camposValidar['valor'],
-        //     $camposValidar['valorPromocional'],
-        //     $camposValidar['custo'],
-        //     $camposValidar['peso'],
-        //     $camposValidar['dimensoes'],
-        //     $camposValidar['marca']];
+        //     
 
-        if (isset($camposValidar)) {
-            $dadosRetorno = pedidoService::class;
-            
+        if (isset($camposValidar)) {           
+            // pedidoService::criarPedido($camposValidar);
+
+            pedidoService::teste($camposValidar);
+
         }
     }        
 }

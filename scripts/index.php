@@ -1,5 +1,5 @@
 <?php
-require './classes/pedido.php';
+require_once './classes/pedido.php';
 
 $validaCampos = new Pedido();
 

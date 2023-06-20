@@ -7,19 +7,20 @@ $config = array();
 define('DEBUG', true);
 
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/api/");
+	define("BASE_URL", "https://www.replicade.com.br/api");
 	$config['dbname'] = 'pedido';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'root';
 	$config['token'] ='BasicaXdPMzVLZ09EZnRvOHY3M1I6';
+
 } else {
 	define("BASE_URL", "http://localhost/api/");
 	$config['dbname'] = 'pedido';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'root';
-	$config['token'] = 'BasicaXdPMzVLZ09EZnRvOHY3M1I6';
+	$config['token'] = 'Basic'.'aXdPMzVLZ09EZnRvOHY3M1I6';
 }
 
 global $db;
