@@ -7,14 +7,10 @@ class Pedido {
     public $camposValidados = [];
 
     function validaCampos($camposValidar) {
-        // $camposObrigatorios = [$camposValidar['produto'],
-        //     
 
-        if (isset($camposValidar)) {           
-            // pedidoService::criarPedido($camposValidar);
+        if (isset($camposValidar)) {
 
-            pedidoService::teste($camposValidar);
-
+            pedidoService::criarPedido($camposValidar);
         }
     }        
 }
