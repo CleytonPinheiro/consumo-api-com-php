@@ -8,7 +8,7 @@ class Pedido {
 
     function validaCampos($camposValidar) {
 
-        if (isset($camposValidar)) {
+        if(isset($camposValidar)) {
 
             pedidoService::criarPedido($camposValidar);
         }

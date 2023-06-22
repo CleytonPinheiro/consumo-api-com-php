@@ -22,7 +22,7 @@
 
             <div class="d-flex flex-direction-column">
                 <label for="status" class="label">Status *</label>
-                <select id="status" name="status" class="field">
+                <select id="status" name="status" class="field" required>
                     <option value="enabled">Ativo</option>
                     <option value="disabled">Desativo</option>
                 </select>
@@ -35,52 +35,52 @@
             
             <div class="d-flex flex-direction-column">
                 <label for="produto" class="label">Título do produto *</label>
-                <input type="text" class="field" id="produto" name="name" placeholder="Produto"  />
+                <input type="text" class="field" id="produto" name="name" placeholder="Produto" required/>
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="descricao" class="label">Descrição * </label>
-                <input type="text" class="field" id="descricao" name="description" placeholder="Descrição do produto"  />  
+                <input type="text" class="field" id="descricao" name="description" placeholder="Descrição do produto" required/>  
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="valor" class="label">Valor venda *</label>
-                <input type="number" class="field" id="valor" name="price" placeholder="Valor venda"  />
+                <input type="number" class="field" id="valor" name="price" placeholder="Valor venda" required/>
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="promocional" class="label">Valor promocional *</label>
-                <input type="number" class="field" id="promocional" name="promotional_price" placeholder="Valor promocional"  />
+                <input type="number" class="field" id="promocional" name="promotional_price" placeholder="Valor promocional" required/>
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="custo" class="label">Custo *</label>
-                <input type="number" class="field" id="custo" name="cost" placeholder="Custo"  />
+                <input type="number" class="field" id="custo" name="cost" placeholder="Custo" required/>
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="peso" class="label">Peso bruto (kg) *</label>
-                <input type="number" class="field " id="peso" name="weight" placeholder="Peso em (kg)"  />
+                <input type="number" class="field " id="peso" name="weight" placeholder="Peso em (kg)" required/>
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="largura" class="label">Largura * </label>
-                <input type="number" class="field " id="largura" name="width" placeholder="Largura (cm)" />
+                <input type="number" class="field " id="largura" name="width" placeholder="Largura (cm)" required />
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="altura" class="label">Altura * </label>
-                <input type="number" class="field " id="altura" name="height" placeholder="Altura (cm)" />
+                <input type="number" class="field " id="altura" name="height" placeholder="Altura (cm)" required />
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="profundidade" class="label">Profundidade * </label>
-                <input type="number" class="field" id="profundidade" name="length" placeholder="Profundidade (cm)" />
+                <input type="number" class="field" id="profundidade" name="length" placeholder="Profundidade (cm)" required />
             </div>
 
             <div class="d-flex flex-direction-column">
                 <label for="marca" class="label">Marca *</label>
-                <input type="number" class="field" id="marca" name="brand" placeholder="Marca/Fabricante"  />
+                <input type="number" class="field" id="marca" name="brand" placeholder="Marca/Fabricante" required />
             </div>
 
             <div class="d-flex flex-direction-column">
@@ -110,7 +110,7 @@
 
             <div class="d-flex flex-direction-column">
                 <label for="subcategoria" class="label">Sub Categoria </label>
-                <input type="text" class="field" id="subcategoria" name="subcategory" placeholder="Sub categoria (opcional)" />     
+                <input type="text" class="field" id="subcategoria" name="subcategory" placeholder="Sub categoria (opcional)" />    
             </div>
 
             <div class="d-flex flex-direction-column">
@@ -149,13 +149,13 @@
             </div>
 
             <div class="d-flex flex-direction-column">
-                <label for="especificacao" class="label">Especificação * </label>
-                <input type="number" class="field" id="especificacao" name="variations[0][specifications][key]" placeholder="Especificação (opcional)" />
+                <label for="especificacao" class="label">Chave Especificação </label>
+                <input type="number" class="field" id="especificacao" name="variations[0][specifications][][key]" placeholder="Especificação (opcional)" />
             </div>
 
             <div class="d-flex flex-direction-column">
-                <label for="value" class="label">Especificação * </label>
-                <input type="number" class="field" id="value" name="variations[0][specifications][value]" placeholder="Especificação (opcional)" />
+                <label for="value" class="label">Valor especificação </label>
+                <input type="number" class="field" id="value" name="variations[0][specifications][0][value]" placeholder="Especificação (opcional)" />
             </div>
 
             <div class="d-flex input-img">
@@ -166,8 +166,17 @@
             <div class="form-group-btn d-flex">
                 <input type="reset" class="btn-action" value="Cancelar" />
                 <input type="submit" class="btn-action" value="Enviar" /> 
-            </div>           
-        </form>
+            </div>
+
+            <iframe src="./pages/modal.php" frameborder="0"></iframe>
+
+            <div class="wrapper ">
+                    <?php require './pages/modal.php';
+                    
+                        "<a href="#demo-modal">Abrir modal</a>"
+                    ?>                
+            </div>                
+        </form>       
     </main>    
 </body>
 </html>
