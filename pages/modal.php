@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modal</title>
 </head>
 <body>
     <link rel="stylesheet" href="style.css" />
-    <!-- botão para abrir -->
+    <h1>TESTE TESTE</h1>
     <!-- <div class="wrapper">
         <a href="#demo-modal">Abrir modal</a>
     </div> -->
 
-    <div id="demo-modal" class="modal">
+    <div id="demo-modal" class="modal modal:target">
         <div class="modal__content">
             <h1>Modal com HTML e CSS</h1>
     
