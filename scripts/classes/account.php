@@ -2,15 +2,15 @@
 
 require_once './services/pedidoService.php';
 
-class Pedido {
+class Account {
 
     public $camposValidados = [];
 
-    function validaCampos($camposValidar) {
+    function actionGetAccount($camposValidar) {
 
         if(isset($camposValidar)) {
 
-            pedidoService::criarPedido($camposValidar);
+            AccountService::account($camposValidar);
         }
     }        
 }

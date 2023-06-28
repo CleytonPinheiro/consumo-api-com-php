@@ -1,6 +1,6 @@
 <?php
-require_once './classes/pedido.php';
+require_once './classes/account.php';
 
-$validaCampos = new Pedido();
+$validaCampos = new Account();
 
-$validaCampos->validaCampos($_POST);
+$validaCampos->actionGetAccount($_POST);
